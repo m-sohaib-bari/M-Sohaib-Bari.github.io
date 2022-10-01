@@ -1,0 +1,253 @@
+/* Cascading stylesheet for the website */
+
+/* Text inside these asterisks and slashes are comments for human */
+
+
+  @media (max-width: 83.375rem) {
+    img.headshot {
+      margin-top: 0rem;
+      width: 50vh;
+    }
+  }
+
+  /* this scroll bar styling is for all browsers except Firefox (desktop and android) */
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.375rem;
+    background: linear-gradient(transparent, #92cbc5);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(transparent, #009789);
+  }
+
+  .nav {
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: #546E79;
+    height: 5rem;
+    width: 100%;
+  }
+
+  .nav ul li {
+    font-weight: 550;
+    display: inline-block;
+    line-height: 5rem;
+    margin: 0 0.313rem;
+  }
+
+  .nav ul li a {
+    color: #f5f5f5;
+    font-size: 1.25rem;
+    padding: 0.438rem 0.813rem;
+    border-radius: 0.188rem;
+    text-transform: uppercase;
+  }
+
+  a.active, a:hover {
+    background: #009789;
+    transition: 0.5s;
+  }
+
+  .checkbtn:active {
+    ::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 0.375rem;
+      background: linear-gradient(transparent, #92cbc5);
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+      background: linear-gradient(transparent, #009789);
+    }
+      overflow-y: scroll;
+  }
+
+  .checkbtn {
+    font-size: 1.875rem;
+    color: #f5f5f5;
+    float: right;
+    line-height: 5rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  @media (max-width: 43.75rem) {
+    .checkbtn {
+      display: inline-block;
+    }
+    .nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #36454f;
+      top: 5.0rem;
+      right: 100%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 1000;
+    }
+    .nav ul li {
+      display: block;
+      margin: 3.125rem 0;
+      line-height: 1.875rem;
+    }
+    .nav ul li a {
+      font-size: 1.1rem;
+    }
+    a:hover, a.active {
+      background: #009789;
+    }
+    #check:checked ~ ul{
+      right: 0;
+    }
+  }
+
+  a {
+    padding: 0.07rem 0.3rem;
+    border-radius: 0.1rem;
+    color: #f5f5f5;
+    text-decoration: none; /* This means we do not want hyperlinks to be underlined */
+  }
+
+  a:hover {
+    background: #009789;
+    text-decoration: none; /* This means we do not want hyperlinks to be underlined */
+  }
+
+  section {
+    place-items: center;
+    align-content: center;
+    display: grid;
+    min-height: 100vh;
+  }
+
+  #firstSection {
+    min-height: 75vh;
+  }
+
+  .hidden {
+    opacity: 0;
+    filter: blur(0.313rem);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+
+  @media(prefers-reduced-motion) {
+    .hidden {
+      transition: none;
+    }
+  }
+
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+
+  body {
+    background-color: #1C252B;
+    /* not added background color because I have set background video */
+    font-family: "Courier New", Helvetica, sans-serif;
+    text-align: center;
+   }
+
+  footer {
+    color: #f5f5f5;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .tertiary {
+    color: #a5e5de;
+  }
+
+  p {
+    color: #f5f5f5;
+    line-height: 1.5rem;
+  }
+
+  h1 {
+    color: #f5f5f5;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+   }
+
+  h2 {
+    color: #92cbc5;
+    top-margin: 2.5rem;
+    bottom-margin: 2.5rem;
+   }
+
+   .resumeH2 {
+     color: #92cbc5;
+     padding-top: 3.5rem;
+     top-margin: 2.5rem;
+     bottom-margin: 2.5rem;
+   }
+
+  h3 {
+    color: #a5e5de;
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+
+  .tertiaryResume {
+    color: #f5f5f5;
+  }
+
+  h4 {
+    color: #f5f5f5;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  h5 {
+    margin-top: 0.5rem;
+  }
+
+  hr {
+    background-color: #92cbc5;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  /* this controls how the bullet points in the resume page looks */
+  .resumeList {
+    color: #f5f5f5;
+    line-height: 1.5rem;
+    list-style: none;
+    text-decoration: none;
+    display: table;
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: centre;
+  }
+
+  .resumeList li::before {
+    content: "\00BB" " ";
+    text-align: center;
+  }
+
+  #resumeFooter {
+    color: #a5e5de;
+  }
+
+  #contactFooter {
+    color: #a5e5de;
+  }
