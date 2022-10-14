@@ -13,7 +13,7 @@
   /* this scroll bar styling is for all browsers except Firefox (desktop and android) */
 
   ::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.55rem;
   }
 
   ::-webkit-scrollbar-thumb {
